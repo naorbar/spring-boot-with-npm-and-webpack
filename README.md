@@ -60,18 +60,18 @@ Add package.json to the app folder - it will include webpack dependecy:
         "description": "@Description Use NPM in my spring-boot project\r @Author barna10\r @Date barna10",
         "main": "index.js",
         "scripts": {
-	  "test": "echo \"Error: no test specified\" && exit 1",
-	  "build": "webpack"
+	    "test": "echo \"Error: no test specified\" && exit 1",
+	    "build": "webpack"
         },
         "author": "barna10",
         "license": "ISC",
         "dependencies": {
-          "arithmetic": "^1.0.1",
-	  "repeat-string": "^1.6.1"
+            "arithmetic": "^1.0.1",
+	    "repeat-string": "^1.6.1"
         },
         "devDependencies": {
-          "webpack": "^4.9.1",
-          "webpack-cli": "^2.1.4"
+            "webpack": "^4.9.1",
+            "webpack-cli": "^2.1.4"
         }
     }
 
