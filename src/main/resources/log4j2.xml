@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Use packages="my.package.name" to specify where the custom log4j2 plugins are located -->
+<Configuration packages="com.ca.log4j2.plugins" monitorinterval="30" status="info" strict="true">
+    <Properties>
+        <Property name="filename">log/app.log</Property>
+    </Properties>
+    <Appenders>
+        <Appender type="Console" name="Console">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %C.%L - %msg%n" />
+        </Appender>
+        <Appender type="Console" name="FLOW">
+            <Layout type="PatternLayout" pattern="%C{1}.%M %m %ex%n" />
+        </Appender>
+        <Appender type="File" name="File" fileName="${filename}">
+        	<!-- Use %audit to invoke AuditConverter format method each time the logger is printing a message -->
+            <Layout type="PatternLayout" pattern="%audit %d %p %C.%L [%t] %m%n" />
+        </Appender>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="File" />
+            <AppenderRef ref="Console"/>
+            <!-- Use FLOW to trace down exact method sending the msg -->
+            <!-- <AppenderRef ref="FLOW" /> -->
+        </Root>
+    </Loggers>
+</Configuration>
