@@ -11,7 +11,13 @@
   "license": "ISC",
   "dependencies": {
     "arithmetic": "^1.0.1",
-    "repeat-string": "^1.6.1"
+    "cheerio": "^1.0.0-rc.2",
+    "elements": "^0.6.0",
+    "jquery": "^3.3.1",
+    "jsdom": "^11.11.0",
+    "lodash": "^4.17.10",
+    "repeat-string": "^1.6.1",
+    "underscore": "^1.9.0"
   },
   "devDependencies": {
     "webpack": "^4.9.1",
